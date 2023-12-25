@@ -1,0 +1,1336 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     51061,       1328]
+NotebookOptionsPosition[     43090,       1169]
+NotebookOutlinePosition[     43524,       1186]
+CellTagsIndexPosition[     43481,       1183]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Cuaderno de pr\[AAcute]cticas de Matem\[AAcute]tica Discreta", "Title",
+ CellChangeTimes->{{3.9040989125083227`*^9, 3.9040989619602427`*^9}},
+ TextAlignment->Center,ExpressionUUID->"4f9255af-3cf8-40ed-8afa-a4214bc2b761"],
+
+Cell[TextData[StyleBox["Pr\[AAcute]ctica 5",
+ FontWeight->"Bold"]], "Subtitle",
+ CellChangeTimes->{{3.904099272834715*^9, 3.904099285608721*^9}, 
+   3.904099332154299*^9, {3.9046993506174927`*^9, 3.904699350714898*^9}, {
+   3.906617673958116*^9, 3.9066176740081873`*^9}},
+ TextJustification->
+  0.25,ExpressionUUID->"306b9d3f-50bc-4059-a819-ff360932e69b"],
+
+Cell["\<\
+Grado en Ingenier\[IAcute]a Inform\[AAcute]tica
+Curso 2023/2024\
+\>", "Subtitle",
+ CellChangeTimes->{{3.9040989987338023`*^9, 3.904099029649572*^9}},
+ TextAlignment->Center,ExpressionUUID->"57e1b7e6-753b-4399-9b1e-ecdf39509e79"],
+
+Cell[CellGroupData[{
+
+Cell["Datos personales :  ", "Section",
+ CellChangeTimes->{{3.9047373728226805`*^9, 
+  3.9047373963396597`*^9}},ExpressionUUID->"93042cde-ba0f-4073-be65-\
+0c253e00912d"],
+
+Cell[TextData[{
+ StyleBox["\tApellidos y nombre:",
+  FontWeight->"Bold"],
+ " Carrasco Vico, Juan\n",
+ StyleBox["\tDNI:",
+  FontWeight->"Bold"],
+ " 11111111 0\n",
+ StyleBox["\tFecha de nacimiento:",
+  FontWeight->"Bold"],
+ " 25/03/2005\n",
+ StyleBox["\tGrupo de teor\[IAcute]a:",
+  FontWeight->"Bold"],
+ " A\n",
+ StyleBox["\tGrupo de pr\[AAcute]cticas:",
+  FontWeight->"Bold"],
+ " 1"
+}], "Text",
+ CellChangeTimes->{{3.904737399449687*^9, 3.904737419027659*^9}, {
+  3.912501928402584*^9, 
+  3.912501930889792*^9}},ExpressionUUID->"e04d31bb-48ab-48e5-940c-\
+18aefc39e42a"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.9066176807203054`*^9, 
+  3.906813014952626*^9},ExpressionUUID->"87a227c8-9720-4580-a1f1-\
+e7b91625a1fa"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.9068130267173977`*^9, 3.9068130937210083`*^9}, {
+   3.9068131468724804`*^9, 3.906813153768487*^9}, 
+   3.9068133034963207`*^9},ExpressionUUID->"d29ffdc7-d892-4485-813c-\
+500a5beefba9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Ejercicio 6.3:", "Section",
+ CellChangeTimes->{{3.904699379110852*^9, 3.90469938895662*^9}, {
+  3.9047374539612074`*^9, 3.9047374552844353`*^9}, {3.9047384438598537`*^9, 
+  3.9047384441328945`*^9}, {3.9047395540698957`*^9, 3.9047395549666615`*^9}, {
+  3.906617690278384*^9, 
+  3.906617690629974*^9}},ExpressionUUID->"67bc060f-3c3c-4e5a-bbe5-\
+5d64b6d81c80"],
+
+Cell[CellGroupData[{
+
+Cell["a)\[Not]x:", "Subsection",
+ CellChangeTimes->{{3.904699394467963*^9, 3.904699403133216*^9}, {
+   3.904737579652534*^9, 3.9047376784581203`*^9}, {3.904738460004856*^9, 
+   3.9047384891618605`*^9}, 3.9047396199080772`*^9, {3.9047397008690896`*^9, 
+   3.904739731893131*^9}, {3.906617698148508*^9, 3.9066177000003285`*^9}, 
+   3.906811921452485*^9},ExpressionUUID->"5d3a2144-67d6-42f1-994d-\
+fe3eddcf9ed2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"TautologyQ", "[", 
+     RowBox[{"\[Not]", "x"}], "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<Es tautolog\[IAcute]a\>\"", "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<No es tautolog\[IAcute]a\>\"", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"TautologyQ", "[", 
+     RowBox[{"Not", "[", 
+      RowBox[{"\[Not]", "x"}], "]"}], "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<Es contradici\[OAcute]n\>\"", "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<No es contradicci\[OAcute]n\>\"", "]"}]}], 
+   "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.9068119293311796`*^9, 3.906811998315799*^9}, {
+   3.9068121809591875`*^9, 3.9068122099175205`*^9}, 
+   3.90681250607718*^9},ExpressionUUID->"9febb533-a2c6-4984-b241-\
+6f8100055520"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"No es tautolog\[IAcute]a\"\>"], "Print",
+ CellChangeTimes->{3.906812212724166*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[1]:=",ExpressionUUID->"604cdb60-c2bc-4523-91f2-b6f3619468b8"],
+
+Cell[BoxData["\<\"No es contradicci\[OAcute]n\"\>"], "Print",
+ CellChangeTimes->{3.906812212742944*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[1]:=",ExpressionUUID->"83cb3201-35f9-4ab4-ac23-2c9a5ba5c2d1"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["b)x1 \[Implies] (x2 \[Or] x1):", "Subsection",
+ CellChangeTimes->{{3.904699394467963*^9, 3.904699403133216*^9}, {
+   3.904737579652534*^9, 3.9047376784581203`*^9}, {3.904738460004856*^9, 
+   3.9047384891618605`*^9}, 3.9047396199080772`*^9, {3.9047397008690896`*^9, 
+   3.904739731893131*^9}, {3.906617698148508*^9, 3.9066177000003285`*^9}, 
+   3.906811921452485*^9, {3.906812223826125*^9, 
+   3.906812243371928*^9}},ExpressionUUID->"2b1d16d5-118a-4bc4-a23b-\
+485696423513"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"TautologyQ", "[", 
+     RowBox[{"x1", "\[Implies]", 
+      RowBox[{"(", 
+       RowBox[{"x2", "\[Or]", "x1"}], ")"}]}], "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<Es tautolog\[IAcute]a\>\"", "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<No es tautolog\[IAcute]a\>\"", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"TautologyQ", "[", 
+     RowBox[{"Not", "[", 
+      RowBox[{"x1", "\[Implies]", 
+       RowBox[{"(", 
+        RowBox[{"x2", "\[Or]", "x1"}], ")"}]}], "]"}], "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<Es contradici\[OAcute]n\>\"", "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<No es contradicci\[OAcute]n\>\"", "]"}]}], 
+   "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.9068119293311796`*^9, 3.906811998315799*^9}, {
+   3.9068121809591875`*^9, 3.9068122099175205`*^9}, {3.906812248837208*^9, 
+   3.9068122565280223`*^9}, 
+   3.906812505084634*^9},ExpressionUUID->"a892be96-7263-41cb-8eba-\
+56613a3532a1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"Es tautolog\[IAcute]a\"\>"], "Print",
+ CellChangeTimes->{3.906812212724166*^9, 3.906812257287901*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[3]:=",ExpressionUUID->"55328d56-24c2-4e0b-a63e-fd9e88664d89"],
+
+Cell[BoxData["\<\"No es contradicci\[OAcute]n\"\>"], "Print",
+ CellChangeTimes->{3.906812212724166*^9, 3.906812257294901*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[3]:=",ExpressionUUID->"4685615c-6e89-455c-a956-b595a5b9e578"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["c) x1 \[DoubleLeftRightArrow] (\[Not] x1):", "Subsection",
+ CellChangeTimes->{{3.904699394467963*^9, 3.904699403133216*^9}, {
+   3.904737579652534*^9, 3.9047376784581203`*^9}, {3.904738460004856*^9, 
+   3.9047384891618605`*^9}, 3.9047396199080772`*^9, {3.9047397008690896`*^9, 
+   3.904739731893131*^9}, {3.906617698148508*^9, 3.9066177000003285`*^9}, 
+   3.906811921452485*^9, {3.906812223826125*^9, 3.906812243371928*^9}, {
+   3.9068123542003813`*^9, 3.9068123693387117`*^9}, 
+   3.9068124046803045`*^9},ExpressionUUID->"b682cfc0-383b-4d1b-aa46-\
+d4316c29c67c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"IfAndOnlyIf", "[", 
+    RowBox[{"p_", ",", "q_"}], "]"}], ":=", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"p", " ", "\[Implies]", " ", "q"}], ")"}], "\[And]", 
+    RowBox[{"(", 
+     RowBox[{"q", "\[Implies]", "p"}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"TautologyQ", "[", 
+     RowBox[{"IfAndOnlyIf", "[", 
+      RowBox[{"x1", ",", 
+       RowBox[{"\[Not]", "x1"}]}], "]"}], "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<Es tautolog\[IAcute]a\>\"", "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<No es tautolog\[IAcute]a\>\"", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"TautologyQ", "[", 
+     RowBox[{"Not", "[", 
+      RowBox[{"IfAndOnlyIf", "[", 
+       RowBox[{"x1", ",", 
+        RowBox[{"(", 
+         RowBox[{"\[Not]", "x1"}], ")"}]}], "]"}], "]"}], "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<Es contradici\[OAcute]n\>\"", "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<No es contradicci\[OAcute]n\>\"", "]"}]}], 
+   "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.9068119293311796`*^9, 3.906811998315799*^9}, {
+   3.9068121809591875`*^9, 3.9068122099175205`*^9}, {3.906812248837208*^9, 
+   3.9068122565280223`*^9}, {3.906812380449605*^9, 3.906812396461768*^9}, {
+   3.906812455360649*^9, 3.9068124648922358`*^9}, 3.9068125033251934`*^9, {
+   3.9068131037398205`*^9, 3.90681313988649*^9}, {3.906813243931371*^9, 
+   3.906813262316352*^9}, {3.906813306348305*^9, 3.9068133097240343`*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"2a7b1736-7aaa-40f4-b420-059610d8acad"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"No es tautolog\[IAcute]a\"\>"], "Print",
+ CellChangeTimes->{
+  3.9068123976203136`*^9, 3.9068124732312293`*^9, {3.9068131225776525`*^9, 
+   3.9068131610744705`*^9}, {3.9068132456217685`*^9, 3.9068132633316307`*^9}, 
+   3.906813311007302*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[31]:=",ExpressionUUID->"d7964f74-3080-4d2a-a6e9-0b55f85de36c"],
+
+Cell[BoxData["\<\"Es contradici\[OAcute]n\"\>"], "Print",
+ CellChangeTimes->{
+  3.9068123976203136`*^9, 3.9068124732312293`*^9, {3.9068131225776525`*^9, 
+   3.9068131610744705`*^9}, {3.9068132456217685`*^9, 3.9068132633316307`*^9}, 
+   3.9068133110133*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[31]:=",ExpressionUUID->"6b3470d3-bd00-4e86-bd60-4409d54228d6"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["d) (x1 \[Xor] x2) \[Xor] (\[Not]( x1 \[DoubleLeftRightArrow] x2)):", \
+"Subsection",
+ CellChangeTimes->{{3.904699394467963*^9, 3.904699403133216*^9}, {
+   3.904737579652534*^9, 3.9047376784581203`*^9}, {3.904738460004856*^9, 
+   3.9047384891618605`*^9}, 3.9047396199080772`*^9, {3.9047397008690896`*^9, 
+   3.904739731893131*^9}, {3.906617698148508*^9, 3.9066177000003285`*^9}, 
+   3.906811921452485*^9, {3.906812223826125*^9, 3.906812243371928*^9}, {
+   3.9068123542003813`*^9, 3.9068123693387117`*^9}, 3.9068124046803045`*^9, {
+   3.906812510746189*^9, 
+   3.906812544169151*^9}},ExpressionUUID->"844f0a76-d4ed-423f-b868-\
+ffff18530525"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"IfAndOnlyIf", "[", 
+    RowBox[{"p_", ",", "q_"}], "]"}], ":=", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"p", " ", "\[Implies]", " ", "q"}], ")"}], "\[And]", 
+    RowBox[{"(", 
+     RowBox[{"q", "\[Implies]", "p"}], ")"}]}]}], ";"}]], "Input",ExpressionUU\
+ID->"4e45069d-5f1c-4541-9134-0de1bcdbe320"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"TautologyQ", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"x1", "\[Xor]", "x2"}], ")"}], "\[Xor]", 
+      RowBox[{"(", 
+       RowBox[{"\[Not]", 
+        RowBox[{"(", 
+         RowBox[{"IfAndOnlyIf", "[", 
+          RowBox[{"x1", ",", "x2"}], "]"}], ")"}]}], ")"}]}], "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<Es tautolog\[IAcute]a\>\"", "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<No es tautolog\[IAcute]a\>\"", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"TautologyQ", "[", 
+     RowBox[{"Not", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"x1", "\[Xor]", "x2"}], ")"}], "\[Xor]", 
+       RowBox[{"(", 
+        RowBox[{"\[Not]", 
+         RowBox[{"(", 
+          RowBox[{"IfAndOnlyIf", "[", 
+           RowBox[{"x1", ",", "x2"}], "]"}], ")"}]}], ")"}]}], "]"}], "]"}], 
+    ",", 
+    RowBox[{"Print", "[", "\"\<Es contradici\[OAcute]n\>\"", "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<No es contradicci\[OAcute]n\>\"", "]"}]}], 
+   "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.9068119293311796`*^9, 3.906811998315799*^9}, {
+   3.9068121809591875`*^9, 3.9068122099175205`*^9}, {3.906812248837208*^9, 
+   3.9068122565280223`*^9}, {3.906812380449605*^9, 3.906812396461768*^9}, {
+   3.906812455360649*^9, 3.9068124648922358`*^9}, 3.906812512749183*^9, {
+   3.9068125516001415`*^9, 3.9068125591676006`*^9}, {3.9068134148984604`*^9, 
+   3.906813432104165*^9}, 3.9068134922540984`*^9},
+ CellLabel->"In[37]:=",ExpressionUUID->"a048d050-6883-4ada-80d9-be40367d3107"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"No es tautolog\[IAcute]a\"\>"], "Print",
+ CellChangeTimes->{3.9068123976203136`*^9, 3.9068124732312293`*^9, 
+  3.906812559678822*^9, 3.906813433156165*^9, 3.906813493524379*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[37]:=",ExpressionUUID->"61df30a3-5a94-469b-873f-8c43a8e73e4f"],
+
+Cell[BoxData["\<\"Es contradici\[OAcute]n\"\>"], "Print",
+ CellChangeTimes->{3.9068123976203136`*^9, 3.9068124732312293`*^9, 
+  3.906812559678822*^9, 3.906813433156165*^9, 3.906813493531379*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[37]:=",ExpressionUUID->"970a7bfb-8641-45ba-b889-074762753df4"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["e) ((x1 \[Implies](x2 \[Or] x3)) \[Nand] x3) \[Xor] (\[Not] x3):", \
+"Subsection",
+ CellChangeTimes->{{3.904699394467963*^9, 3.904699403133216*^9}, {
+   3.904737579652534*^9, 3.9047376784581203`*^9}, {3.904738460004856*^9, 
+   3.9047384891618605`*^9}, 3.9047396199080772`*^9, {3.9047397008690896`*^9, 
+   3.904739731893131*^9}, {3.906617698148508*^9, 3.9066177000003285`*^9}, 
+   3.906811921452485*^9, {3.906812223826125*^9, 3.906812243371928*^9}, {
+   3.9068123542003813`*^9, 3.9068123693387117`*^9}, 3.9068124046803045`*^9, {
+   3.906812510746189*^9, 3.906812607735381*^9}, 
+   3.9068126515338993`*^9},ExpressionUUID->"d374f3c8-6548-46f1-9391-\
+ff563615967c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"TautologyQ", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"x1", "\[Implies]", 
+          RowBox[{"(", 
+           RowBox[{"x2", "\[Or]", "x3"}], ")"}]}], ")"}], "\[Nand]", "x3"}], 
+       ")"}], "\[Xor]", 
+      RowBox[{"(", 
+       RowBox[{"\[Not]", "x3"}], ")"}]}], "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<Es tautolog\[IAcute]a\>\"", "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<No es tautolog\[IAcute]a\>\"", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"TautologyQ", "[", 
+     RowBox[{"Not", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"x1", "\[Implies]", 
+           RowBox[{"(", 
+            RowBox[{"x2", "\[Or]", "x3"}], ")"}]}], ")"}], "\[Nand]", "x3"}], 
+        ")"}], "\[Xor]", 
+       RowBox[{"(", 
+        RowBox[{"\[Not]", "x3"}], ")"}]}], "]"}], "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<Es contradici\[OAcute]n\>\"", "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<No es contradicci\[OAcute]n\>\"", "]"}]}], 
+   "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.9068119293311796`*^9, 3.906811998315799*^9}, {
+   3.9068121809591875`*^9, 3.9068122099175205`*^9}, {3.906812248837208*^9, 
+   3.9068122565280223`*^9}, {3.906812380449605*^9, 3.906812396461768*^9}, {
+   3.906812455360649*^9, 3.9068124648922358`*^9}, 3.906812512749183*^9, {
+   3.9068125516001415`*^9, 3.9068125591676006`*^9}, {3.9068126176970673`*^9, 
+   3.906812624351184*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"316b4753-5b07-4062-82a1-84822a33cab9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"No es tautolog\[IAcute]a\"\>"], "Print",
+ CellChangeTimes->{3.9068123976203136`*^9, 3.9068124732312293`*^9, 
+  3.906812559678822*^9, 3.9068126250600615`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[13]:=",ExpressionUUID->"e4419c4a-dfe2-4290-8a40-22bd1e7b3528"],
+
+Cell[BoxData["\<\"Es contradici\[OAcute]n\"\>"], "Print",
+ CellChangeTimes->{3.9068123976203136`*^9, 3.9068124732312293`*^9, 
+  3.906812559678822*^9, 3.906812625066063*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[13]:=",ExpressionUUID->"add42cd4-cd0a-45ed-ae47-564b395bbde1"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["f) ((\[Not]((\[Not](x1 \[And] x2 )) \[Implies] x3)) \[Or] (\[Not]x4)) \
+\[Nand](x4 \[Or] x5):", "Subsection",
+ CellChangeTimes->{{3.904699394467963*^9, 3.904699403133216*^9}, {
+   3.904737579652534*^9, 3.9047376784581203`*^9}, {3.904738460004856*^9, 
+   3.9047384891618605`*^9}, 3.9047396199080772`*^9, {3.9047397008690896`*^9, 
+   3.904739731893131*^9}, {3.906617698148508*^9, 3.9066177000003285`*^9}, 
+   3.906811921452485*^9, {3.906812223826125*^9, 3.906812243371928*^9}, {
+   3.9068123542003813`*^9, 3.9068123693387117`*^9}, 3.9068124046803045`*^9, {
+   3.906812510746189*^9, 3.906812607735381*^9}, {3.9068126515338993`*^9, 
+   3.9068127080563354`*^9}},ExpressionUUID->"3815a7bf-03f2-4c3c-8809-\
+4430ca09b384"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"TautologyQ", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"\[Not]", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"\[Not]", 
+              RowBox[{"(", 
+               RowBox[{"x1", "\[And]", "x2"}], ")"}]}], ")"}], "\[Implies]", 
+            "x3"}], ")"}]}], ")"}], "\[Or]", 
+        RowBox[{"(", 
+         RowBox[{"\[Not]", "x4"}], ")"}]}], ")"}], "\[Nand]", 
+      RowBox[{"(", 
+       RowBox[{"x4", "\[Or]", "x5"}], ")"}]}], "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<Es tautolog\[IAcute]a\>\"", "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<No es tautolog\[IAcute]a\>\"", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"TautologyQ", "[", 
+     RowBox[{"Not", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"\[Not]", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"\[Not]", 
+               RowBox[{"(", 
+                RowBox[{"x1", "\[And]", "x2"}], ")"}]}], ")"}], "\[Implies]", 
+             "x3"}], ")"}]}], ")"}], "\[Or]", 
+         RowBox[{"(", 
+          RowBox[{"\[Not]", "x4"}], ")"}]}], ")"}], "\[Nand]", 
+       RowBox[{"(", 
+        RowBox[{"x4", "\[Or]", "x5"}], ")"}]}], "]"}], "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<Es contradici\[OAcute]n\>\"", "]"}], ",", 
+    RowBox[{"Print", "[", "\"\<No es contradicci\[OAcute]n\>\"", "]"}]}], 
+   "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.9068119293311796`*^9, 3.906811998315799*^9}, {
+   3.9068121809591875`*^9, 3.9068122099175205`*^9}, {3.906812248837208*^9, 
+   3.9068122565280223`*^9}, {3.906812380449605*^9, 3.906812396461768*^9}, {
+   3.906812455360649*^9, 3.9068124648922358`*^9}, 3.906812512749183*^9, {
+   3.9068125516001415`*^9, 3.9068125591676006`*^9}, {3.9068126176970673`*^9, 
+   3.906812624351184*^9}, {3.9068127198419547`*^9, 3.906812725630946*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"b8c93483-2a8b-4eec-9831-96bcdd470a7f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"No es tautolog\[IAcute]a\"\>"], "Print",
+ CellChangeTimes->{3.9068123976203136`*^9, 3.9068124732312293`*^9, 
+  3.906812559678822*^9, 3.9068126250600615`*^9, 3.906812726162738*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[15]:=",ExpressionUUID->"d34ee8b3-0613-4df8-bfca-e342e1064b28"],
+
+Cell[BoxData["\<\"No es contradicci\[OAcute]n\"\>"], "Print",
+ CellChangeTimes->{3.9068123976203136`*^9, 3.9068124732312293`*^9, 
+  3.906812559678822*^9, 3.9068126250600615`*^9, 3.906812726169738*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[15]:=",ExpressionUUID->"e90fee15-eaab-4f8b-90bc-0d71ad072dd4"]
+}, Closed]]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Ejercicio 6.4:", "Section",
+ CellChangeTimes->{{3.904699379110852*^9, 3.90469938895662*^9}, {
+  3.9047374539612074`*^9, 3.9047374552844353`*^9}, {3.9047384438598537`*^9, 
+  3.9047384441328945`*^9}, {3.9047395540698957`*^9, 3.9047395549666615`*^9}, {
+  3.906617690278384*^9, 3.906617690629974*^9}, {3.90681279520787*^9, 
+  3.906812795322014*^9}},ExpressionUUID->"159e2899-0e45-4824-be13-\
+471c7857548a"],
+
+Cell[CellGroupData[{
+
+Cell["a)(p\[And]p);p:", "Subsection",
+ CellChangeTimes->{{3.904699394467963*^9, 3.904699403133216*^9}, {
+   3.904737579652534*^9, 3.9047376784581203`*^9}, {3.904738460004856*^9, 
+   3.9047384891618605`*^9}, 3.9047396199080772`*^9, {3.9047397008690896`*^9, 
+   3.904739731893131*^9}, {3.906617698148508*^9, 3.9066177000003285`*^9}, 
+   3.906811921452485*^9, {3.906812827752847*^9, 3.906812835927827*^9}, {
+   3.906812918487733*^9, 
+   3.9068129359597144`*^9}},ExpressionUUID->"e3983b18-9aa2-47fe-8cb6-\
+8411decc1787"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"IfAndOnlyIf", "[", 
+    RowBox[{"p_", ",", "q_"}], "]"}], ":=", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"p", " ", "\[Implies]", " ", "q"}], ")"}], "\[And]", 
+    RowBox[{"(", 
+     RowBox[{"q", "\[Implies]", "p"}], ")"}]}]}], ";"}]], "Input",ExpressionUU\
+ID->"9a2b2927-6973-4667-9775-aaf8676450c9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"TautologyQ", "[", 
+     RowBox[{"IfAndOnlyIf", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"p", "\[And]", "p"}], ")"}], ",", "p"}], "]"}], "]"}], ",", 
+    RowBox[{
+    "Print", "[", 
+     "\"\<Es tautolog\[IAcute]a, luego son logicamente equivalentes.\>\"", 
+     "]"}], ",", 
+    RowBox[{
+    "Print", "[", 
+     "\"\<No es tautolog\[IAcute]a, luego no son logicamente \
+equivalentes.\>\"", "]"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.9068119293311796`*^9, 3.906811998315799*^9}, {
+   3.9068121809591875`*^9, 3.9068122099175205`*^9}, 3.90681250607718*^9, {
+   3.9068128456477804`*^9, 3.9068129158988256`*^9}, {3.906813465065743*^9, 
+   3.9068134776309795`*^9}},
+ CellLabel->"In[36]:=",ExpressionUUID->"e0e52dd8-2ca0-4d95-9852-eb253b00c39a"],
+
+Cell[BoxData["\<\"Es tautolog\[IAcute]a, luego son logicamente \
+equivalentes.\"\>"], "Print",
+ CellChangeTimes->{3.906812212724166*^9, 3.9068128560428047`*^9, 
+  3.9068128885620775`*^9, 3.9068134783364706`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[36]:=",ExpressionUUID->"57a6feec-8617-439f-8328-64c126c7e772"]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["b)(p\[Or]p);p:", "Subsection",
+ CellChangeTimes->{{3.904699394467963*^9, 3.904699403133216*^9}, {
+   3.904737579652534*^9, 3.9047376784581203`*^9}, {3.904738460004856*^9, 
+   3.9047384891618605`*^9}, 3.9047396199080772`*^9, {3.9047397008690896`*^9, 
+   3.904739731893131*^9}, {3.906617698148508*^9, 3.9066177000003285`*^9}, 
+   3.906811921452485*^9, {3.906812827752847*^9, 3.906812835927827*^9}, {
+   3.906812918487733*^9, 3.9068129359597144`*^9}, {3.9068135117221375`*^9, 
+   3.906813515975996*^9}},ExpressionUUID->"f9b41b1d-5421-4c0d-878c-\
+138f26b8996a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"IfAndOnlyIf", "[", 
+    RowBox[{"p_", ",", "q_"}], "]"}], ":=", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"p", " ", "\[Implies]", " ", "q"}], ")"}], "\[And]", 
+    RowBox[{"(", 
+     RowBox[{"q", "\[Implies]", "p"}], ")"}]}]}], ";"}]], "Input",ExpressionUU\
+ID->"444f37dc-7acc-47e7-9e72-c05051df4033"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"TautologyQ", "[", 
+     RowBox[{"IfAndOnlyIf", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"p", "\[Or]", "p"}], ")"}], ",", "p"}], "]"}], "]"}], ",", 
+    RowBox[{
+    "Print", "[", 
+     "\"\<Es tautolog\[IAcute]a, luego son logicamente equivalentes.\>\"", 
+     "]"}], ",", 
+    RowBox[{
+    "Print", "[", 
+     "\"\<No es tautolog\[IAcute]a, luego no son logicamente \
+equivalentes.\>\"", "]"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.9068119293311796`*^9, 3.906811998315799*^9}, {
+   3.9068121809591875`*^9, 3.9068122099175205`*^9}, 3.90681250607718*^9, {
+   3.9068128456477804`*^9, 3.9068129158988256`*^9}, {3.906813465065743*^9, 
+   3.9068134776309795`*^9}, {3.906813519609065*^9, 3.9068135299170403`*^9}},
+ CellLabel->"In[39]:=",ExpressionUUID->"991822a1-4ed6-4930-9689-04f5a9d4bc2e"],
+
+Cell[BoxData["\<\"Es tautolog\[IAcute]a, luego son logicamente \
+equivalentes.\"\>"], "Print",
+ CellChangeTimes->{3.906812212724166*^9, 3.9068128560428047`*^9, 
+  3.9068128885620775`*^9, 3.9068134783364706`*^9, 3.9068135305424795`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[39]:=",ExpressionUUID->"272246d8-5da6-4b97-b477-8229d2523b01"]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["c)(p\[And]p)\[Or]q;q:", "Subsection",
+ CellChangeTimes->{{3.904699394467963*^9, 3.904699403133216*^9}, {
+   3.904737579652534*^9, 3.9047376784581203`*^9}, {3.904738460004856*^9, 
+   3.9047384891618605`*^9}, 3.9047396199080772`*^9, {3.9047397008690896`*^9, 
+   3.904739731893131*^9}, {3.906617698148508*^9, 3.9066177000003285`*^9}, 
+   3.906811921452485*^9, {3.906812827752847*^9, 3.906812835927827*^9}, {
+   3.906812918487733*^9, 3.9068129359597144`*^9}, {3.9068135401670437`*^9, 
+   3.9068135535753193`*^9}, {3.906813599638978*^9, 
+   3.9068135997960653`*^9}},ExpressionUUID->"c8394821-c65f-4653-a4af-\
+8c7ea2ccbdbe"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"IfAndOnlyIf", "[", 
+    RowBox[{"p_", ",", "q_"}], "]"}], ":=", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"p", " ", "\[Implies]", " ", "q"}], ")"}], "\[And]", 
+    RowBox[{"(", 
+     RowBox[{"q", "\[Implies]", "p"}], ")"}]}]}], ";"}]], "Input",ExpressionUU\
+ID->"d342eadb-2d58-4c6c-918b-62b3a2196ae8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"TautologyQ", "[", 
+     RowBox[{"IfAndOnlyIf", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"p", "\[And]", "p"}], ")"}], "\[Or]", "q"}], ",", "q"}], 
+      "]"}], "]"}], ",", 
+    RowBox[{
+    "Print", "[", 
+     "\"\<Es tautolog\[IAcute]a, luego son logicamente equivalentes.\>\"", 
+     "]"}], ",", 
+    RowBox[{
+    "Print", "[", 
+     "\"\<No es tautolog\[IAcute]a, luego no son logicamente \
+equivalentes.\>\"", "]"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.9068119293311796`*^9, 3.906811998315799*^9}, {
+   3.9068121809591875`*^9, 3.9068122099175205`*^9}, 3.90681250607718*^9, {
+   3.9068128456477804`*^9, 3.9068129158988256`*^9}, {3.906813465065743*^9, 
+   3.9068134776309795`*^9}, {3.90681356081302*^9, 3.906813565466016*^9}},
+ CellLabel->"In[40]:=",ExpressionUUID->"fd5ca133-d34a-4e5a-bde3-bcd43e28d5e5"],
+
+Cell[BoxData["\<\"No es tautolog\[IAcute]a, luego no son logicamente \
+equivalentes.\"\>"], "Print",
+ CellChangeTimes->{3.906812212724166*^9, 3.9068128560428047`*^9, 
+  3.9068128885620775`*^9, 3.9068134783364706`*^9, 3.906813566105017*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[40]:=",ExpressionUUID->"06e48e6c-77bd-4685-8173-44ff6d3d6b00"]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["d)(p\[And]p)\[And]q;q:", "Subsection",
+ CellChangeTimes->{{3.904699394467963*^9, 3.904699403133216*^9}, {
+   3.904737579652534*^9, 3.9047376784581203`*^9}, {3.904738460004856*^9, 
+   3.9047384891618605`*^9}, 3.9047396199080772`*^9, {3.9047397008690896`*^9, 
+   3.904739731893131*^9}, {3.906617698148508*^9, 3.9066177000003285`*^9}, 
+   3.906811921452485*^9, {3.906812827752847*^9, 3.906812835927827*^9}, {
+   3.906812918487733*^9, 3.9068129359597144`*^9}, {3.9068135401670437`*^9, 
+   3.9068135535753193`*^9}, {3.9068135850654616`*^9, 
+   3.906813597207281*^9}},ExpressionUUID->"06b734d0-ec58-4524-af3f-\
+dccf48f3ad3e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"IfAndOnlyIf", "[", 
+    RowBox[{"p_", ",", "q_"}], "]"}], ":=", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"p", " ", "\[Implies]", " ", "q"}], ")"}], "\[And]", 
+    RowBox[{"(", 
+     RowBox[{"q", "\[Implies]", "p"}], ")"}]}]}], ";"}]], "Input",ExpressionUU\
+ID->"fd7088e1-202b-4b95-82a3-ce9e6056dc79"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"TautologyQ", "[", 
+     RowBox[{"IfAndOnlyIf", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"p", "\[And]", "p"}], ")"}], "\[And]", " ", "q"}], ",", 
+       "q"}], "]"}], "]"}], ",", 
+    RowBox[{
+    "Print", "[", 
+     "\"\<Es tautolog\[IAcute]a, luego son logicamente equivalentes.\>\"", 
+     "]"}], ",", 
+    RowBox[{
+    "Print", "[", 
+     "\"\<No es tautolog\[IAcute]a, luego no son logicamente \
+equivalentes.\>\"", "]"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.9068119293311796`*^9, 3.906811998315799*^9}, {
+   3.9068121809591875`*^9, 3.9068122099175205`*^9}, 3.90681250607718*^9, {
+   3.9068128456477804`*^9, 3.9068129158988256`*^9}, {3.906813465065743*^9, 
+   3.9068134776309795`*^9}, {3.90681356081302*^9, 3.906813565466016*^9}, {
+   3.9068136063939695`*^9, 3.906813609595319*^9}},
+ CellLabel->"In[41]:=",ExpressionUUID->"4272834c-b51e-4e29-8253-e5920a590941"],
+
+Cell[BoxData["\<\"No es tautolog\[IAcute]a, luego no son logicamente \
+equivalentes.\"\>"], "Print",
+ CellChangeTimes->{3.906812212724166*^9, 3.9068128560428047`*^9, 
+  3.9068128885620775`*^9, 3.9068134783364706`*^9, 3.906813566105017*^9, 
+  3.906813610079053*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[41]:=",ExpressionUUID->"fb72d8e1-bb68-4ff0-bad0-1fa3798a4e75"]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["e)(((\[Not] p) \[Or]  (\[Not]q)) \[Implies] (\[Not] r)); (r \[Implies] \
+(q \[And] p)):", "Subsection",
+ CellChangeTimes->{{3.904699394467963*^9, 3.904699403133216*^9}, {
+   3.904737579652534*^9, 3.9047376784581203`*^9}, {3.904738460004856*^9, 
+   3.9047384891618605`*^9}, 3.9047396199080772`*^9, {3.9047397008690896`*^9, 
+   3.904739731893131*^9}, {3.906617698148508*^9, 3.9066177000003285`*^9}, 
+   3.906811921452485*^9, {3.906812827752847*^9, 3.906812835927827*^9}, {
+   3.906812918487733*^9, 3.9068129359597144`*^9}, {3.9068135401670437`*^9, 
+   3.9068135535753193`*^9}, {3.9068135850654616`*^9, 
+   3.9068136814638863`*^9}, {3.90681372637621*^9, 
+   3.9068137271268377`*^9}},ExpressionUUID->"aae3df51-03e9-4c7f-91c4-\
+58bf74f3484c"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"IfAndOnlyIf", "[", 
+    RowBox[{"p_", ",", "q_"}], "]"}], ":=", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"p", " ", "\[Implies]", " ", "q"}], ")"}], "\[And]", 
+    RowBox[{"(", 
+     RowBox[{"q", "\[Implies]", "p"}], ")"}]}]}], ";"}]], "Input",ExpressionUU\
+ID->"ceeffb98-4ed0-4213-8c09-7f5df5fc8a74"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"TautologyQ", "[", 
+     RowBox[{"IfAndOnlyIf", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"\[Not]", "p"}], ")"}], "\[Or]", 
+           RowBox[{"(", 
+            RowBox[{"\[Not]", "q"}], ")"}]}], ")"}], "\[Implies]", 
+         RowBox[{"(", 
+          RowBox[{"\[Not]", "r"}], ")"}]}], ")"}], ",", 
+       RowBox[{"(", 
+        RowBox[{"r", "\[Implies]", 
+         RowBox[{"(", 
+          RowBox[{"q", "\[And]", "p"}], ")"}]}], ")"}]}], "]"}], "]"}], ",", 
+    RowBox[{
+    "Print", "[", 
+     "\"\<Es tautolog\[IAcute]a, luego son logicamente equivalentes.\>\"", 
+     "]"}], ",", 
+    RowBox[{
+    "Print", "[", 
+     "\"\<No es tautolog\[IAcute]a, luego no son logicamente \
+equivalentes.\>\"", "]"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.9068119293311796`*^9, 3.906811998315799*^9}, {
+   3.9068121809591875`*^9, 3.9068122099175205`*^9}, 3.90681250607718*^9, {
+   3.9068128456477804`*^9, 3.9068129158988256`*^9}, {3.906813465065743*^9, 
+   3.9068134776309795`*^9}, {3.90681356081302*^9, 3.906813565466016*^9}, {
+   3.9068136063939695`*^9, 3.906813609595319*^9}, {3.9068136967802114`*^9, 
+   3.9068137213228426`*^9}},
+ CellLabel->"In[42]:=",ExpressionUUID->"49f052bc-172c-4a5b-bafc-6b31d92c138f"],
+
+Cell[BoxData["\<\"Es tautolog\[IAcute]a, luego son logicamente \
+equivalentes.\"\>"], "Print",
+ CellChangeTimes->{3.906813722354845*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[42]:=",ExpressionUUID->"b1337d88-f454-4a41-9362-49a742e22189"]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["f)(((\[Not] p) \[And]q) \[Implies] (\[Not] r)); (p \[Or] (\[Not] q))\
+\[Or] r):", "Subsection",
+ CellChangeTimes->{{3.904699394467963*^9, 3.904699403133216*^9}, {
+   3.904737579652534*^9, 3.9047376784581203`*^9}, {3.904738460004856*^9, 
+   3.9047384891618605`*^9}, 3.9047396199080772`*^9, {3.9047397008690896`*^9, 
+   3.904739731893131*^9}, {3.906617698148508*^9, 3.9066177000003285`*^9}, 
+   3.906811921452485*^9, {3.906812827752847*^9, 3.906812835927827*^9}, {
+   3.906812918487733*^9, 3.9068129359597144`*^9}, {3.9068135401670437`*^9, 
+   3.9068135535753193`*^9}, {3.9068135850654616`*^9, 
+   3.9068136814638863`*^9}, {3.90681372637621*^9, 
+   3.906813786438773*^9}},ExpressionUUID->"586128f9-20e1-4d13-a64a-\
+627d4e65a00a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"IfAndOnlyIf", "[", 
+    RowBox[{"p_", ",", "q_"}], "]"}], ":=", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"p", " ", "\[Implies]", " ", "q"}], ")"}], "\[And]", 
+    RowBox[{"(", 
+     RowBox[{"q", "\[Implies]", "p"}], ")"}]}]}], ";"}]], "Input",ExpressionUU\
+ID->"079829d5-0342-4107-abdb-f6c59699b075"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"TautologyQ", "[", 
+     RowBox[{"IfAndOnlyIf", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"\[Not]", "p"}], ")"}], "\[And]", "q"}], ")"}], 
+         "\[Implies]", 
+         RowBox[{"(", 
+          RowBox[{"\[Not]", "r"}], ")"}]}], ")"}], ",", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"p", "\[Or]", 
+           RowBox[{"(", 
+            RowBox[{"\[Not]", "q"}], ")"}]}], ")"}], "\[Or]", "r"}], ")"}]}], 
+      "]"}], "]"}], ",", 
+    RowBox[{
+    "Print", "[", 
+     "\"\<Es tautolog\[IAcute]a, luego son logicamente equivalentes.\>\"", 
+     "]"}], ",", 
+    RowBox[{
+    "Print", "[", 
+     "\"\<No es tautolog\[IAcute]a, luego no son logicamente \
+equivalentes.\>\"", "]"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.9068119293311796`*^9, 3.906811998315799*^9}, {
+   3.9068121809591875`*^9, 3.9068122099175205`*^9}, 3.90681250607718*^9, {
+   3.9068128456477804`*^9, 3.9068129158988256`*^9}, {3.906813465065743*^9, 
+   3.9068134776309795`*^9}, {3.90681356081302*^9, 3.906813565466016*^9}, {
+   3.9068136063939695`*^9, 3.906813609595319*^9}, {3.9068136967802114`*^9, 
+   3.9068137213228426`*^9}, {3.906813797548757*^9, 3.906813828075139*^9}},
+ CellLabel->"In[44]:=",ExpressionUUID->"77c104a4-41d6-43b6-a0f5-f6e55033885d"],
+
+Cell[BoxData["\<\"No es tautolog\[IAcute]a, luego no son logicamente \
+equivalentes.\"\>"], "Print",
+ CellChangeTimes->{3.906813722354845*^9, 3.9068138300354204`*^9, 
+  3.906813864075451*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[44]:=",ExpressionUUID->"2302e043-25e2-40f0-b6c0-a8c65eb6d922"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Ejercicio 6.15:", "Section",
+ CellChangeTimes->{{3.904699379110852*^9, 3.90469938895662*^9}, {
+  3.9047374539612074`*^9, 3.9047374552844353`*^9}, {3.9047384438598537`*^9, 
+  3.9047384441328945`*^9}, {3.9047395540698957`*^9, 3.9047395549666615`*^9}, {
+  3.906617690278384*^9, 3.906617690629974*^9}, {3.90681279520787*^9, 
+  3.906812795322014*^9}, {3.90681387627967*^9, 
+  3.9068138764076695`*^9}},ExpressionUUID->"a2d3dc50-ff6e-4ef8-b597-\
+6d7a69459a53"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"IfAndOnlyIf", "[", 
+    RowBox[{"p_", ",", "q_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"p", "\[Implies]", "q"}], ")"}], "\[And]", 
+    RowBox[{"(", 
+     RowBox[{"q", "\[Implies]", "p"}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"premisa1", " ", ":=", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"p", " ", "\[And]", " ", "q"}], ")"}], " ", "\[Implies]", " ", 
+    "r"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"premisa2", " ", ":=", " ", 
+   RowBox[{"IfAndOnlyIf", "[", 
+    RowBox[{"s", ",", 
+     RowBox[{"(", 
+      RowBox[{"r", "\[Or]", "p"}], ")"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"premisa3", " ", ":=", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"\[Not]", " ", "p"}], ")"}], "\[Implies]", " ", 
+    RowBox[{"(", 
+     RowBox[{"\[Not]", "q"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"premisa4", " ", ":=", " ", "q"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"conclusion1", " ", ":=", " ", "s"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"conclusion2", ":=", " ", "p"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"If", "[", 
+  RowBox[{
+   RowBox[{"TautologyQ", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+      "premisa1", " ", "\[And]", " ", "premisa2", " ", "\[And]", " ", 
+       "premisa3", " ", "\[And]", " ", "premisa4"}], ")"}], "\[Implies]", " ",
+      "conclusion1"}], "]"}], ",", 
+   RowBox[{
+   "Print", "[", 
+    "\"\<La arguimentacion es v\[AAcute]lida, Fernando aprobar\[AAcute]\>\"", 
+    "]"}], ",", " ", 
+   RowBox[{
+   "Print", "[", 
+    "\"\<La arguimentacion no es v\[AAcute]lida, Fernando no tiene por qu\
+\[EAcute] aprobar\>\"", "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.906814017947512*^9, 3.90681427684126*^9}, {
+  3.906814344107185*^9, 3.906814364022564*^9}},
+ CellLabel->"In[53]:=",ExpressionUUID->"ff1813f9-808a-4399-acf0-b37087b332ab"],
+
+Cell[BoxData["\<\"La arguimentacion es v\[AAcute]lida, Fernando aprobar\
+\[AAcute]\"\>"], "Print",
+ CellChangeTimes->{3.9068142892739906`*^9, 3.9068143834256177`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[53]:=",ExpressionUUID->"1447aaeb-aa18-43a9-9a3d-5cf87dc8b13f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"If", "[", 
+  RowBox[{
+   RowBox[{"TautologyQ", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+      "premisa1", " ", "\[And]", " ", "premisa2", " ", "\[And]", " ", 
+       "premisa3", " ", "\[And]", " ", "premisa4"}], ")"}], "\[Implies]", " ",
+      "conclusion2"}], "]"}], ",", 
+   RowBox[{
+   "Print", "[", 
+    "\"\<La arguimentacion es v\[AAcute]lida, Fernando tendr\[AAcute] \
+suerte\>\"", "]"}], ",", " ", 
+   RowBox[{
+   "Print", "[", 
+    "\"\<La arguimentacion no es v\[AAcute]lida, Fernando no tiene por qu\
+\[EAcute] tener suerte\>\"", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9068143717221203`*^9, 3.906814390377386*^9}},
+ CellLabel->"In[61]:=",ExpressionUUID->"4e686f3a-5012-4c63-9e54-8e2ddcbadfd0"],
+
+Cell[BoxData["\<\"La arguimentacion es v\[AAcute]lida, Fernando \
+tendr\[AAcute] suerte\"\>"], "Print",
+ CellChangeTimes->{3.9068143907681046`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[61]:=",ExpressionUUID->"a18fb238-eaa8-4f70-b984-a599a8d1f3ea"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Ejercicio 6.19:", "Section",
+ CellChangeTimes->{{3.904699379110852*^9, 3.90469938895662*^9}, {
+  3.9047374539612074`*^9, 3.9047374552844353`*^9}, {3.9047384438598537`*^9, 
+  3.9047384441328945`*^9}, {3.9047395540698957`*^9, 3.9047395549666615`*^9}, {
+  3.906617690278384*^9, 3.906617690629974*^9}, {3.90681279520787*^9, 
+  3.906812795322014*^9}, {3.90681387627967*^9, 3.9068138764076695`*^9}, {
+  3.906814638069825*^9, 
+  3.9068146381691785`*^9}},ExpressionUUID->"4ed7dd24-da57-4e97-906a-\
+d673e614af86"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"tabla", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<V\>\"", ",", "\"\<V\>\"", ",", "\"\<V\>\""}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<V\>\"", ",", "\"\<F\>\"", ",", "\"\<V\>\""}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<F\>\"", ",", "\"\<V\>\"", ",", "\"\<V\>\""}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<F\>\"", ",", "\"\<F\>\"", ",", "\"\<F\>\""}], "}"}]}], 
+    "\[IndentingNewLine]", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TableForm", "[", "tabla", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
+   RowBox[{"i", "<=", " ", 
+    RowBox[{"Length", "[", "tabla", "]"}]}], ",", " ", 
+   RowBox[{"++", "i"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"tabla", "[", 
+       RowBox[{"i", ",", "3"}], "]"}], "==", "\"\<V\>\""}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", "\"\<a\>\"", "]"}]}], "\[IndentingNewLine]", 
+    "]"}]}], "\[IndentingNewLine]", "]"}]}], "Input",
+ CellChangeTimes->{{3.9068154368893957`*^9, 3.9068155187523613`*^9}, {
+  3.9068155702962446`*^9, 3.9068155999587574`*^9}, {3.9068157961665664`*^9, 
+  3.9068162920049877`*^9}, {3.9068163846828737`*^9, 3.906816390184092*^9}, {
+  3.9068164221991687`*^9, 
+  3.9068165385370836`*^9}},ExpressionUUID->"bbf1db99-8af9-4b04-b2af-\
+ba1a4f3ea8d1"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"V\"\>", "\<\"V\"\>", "\<\"V\"\>"},
+    {"\<\"V\"\>", "\<\"F\"\>", "\<\"V\"\>"},
+    {"\<\"F\"\>", "\<\"V\"\>", "\<\"V\"\>"},
+    {"\<\"F\"\>", "\<\"F\"\>", "\<\"F\"\>"}
+   },
+   GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.9068164112578583`*^9, 3.906816428462839*^9}, {
+  3.9068164943662453`*^9, 3.9068165322666483`*^9}},
+ CellLabel->
+  "Out[174]//TableForm=",ExpressionUUID->"93be1df3-133f-4aad-ad81-\
+caaa8a2025f7"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"2", " ", "\<\"V\"\>"}], ",", 
+     RowBox[{"2", " ", "\<\"V\"\>"}], ",", 
+     RowBox[{"2", " ", "\<\"V\"\>"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"2", " ", "\<\"V\"\>"}], ",", 
+     RowBox[{"2", " ", "\<\"F\"\>"}], ",", 
+     RowBox[{"2", " ", "\<\"V\"\>"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"2", " ", "\<\"F\"\>"}], ",", 
+     RowBox[{"2", " ", "\<\"V\"\>"}], ",", 
+     RowBox[{"2", " ", "\<\"V\"\>"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"2", " ", "\<\"F\"\>"}], ",", 
+     RowBox[{"2", " ", "\<\"F\"\>"}], ",", 
+     RowBox[{"2", " ", "\<\"F\"\>"}]}], "}"}]}], "}"}]], "Print",
+ CellChangeTimes->{{3.9068165290712376`*^9, 3.9068165322711735`*^9}},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[173]:=",ExpressionUUID->"b6fea84e-fe05-438d-b7dc-5dd3893e01d6"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1012.5, 531.75},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>0.85 Inherited,
+FrontEndVersion->"13.3 para Microsoft Windows (64-bit) (July 24, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"1f240edf-619e-4812-8671-29ab0101a23b"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 226, 2, 83, "Title",ExpressionUUID->"4f9255af-3cf8-40ed-8afa-a4214bc2b761"],
+Cell[809, 26, 355, 6, 45, "Subtitle",ExpressionUUID->"306b9d3f-50bc-4059-a819-ff360932e69b"],
+Cell[1167, 34, 238, 5, 73, "Subtitle",ExpressionUUID->"57e1b7e6-753b-4399-9b1e-ecdf39509e79"],
+Cell[CellGroupData[{
+Cell[1430, 43, 169, 3, 57, "Section",ExpressionUUID->"93042cde-ba0f-4073-be65-0c253e00912d"],
+Cell[1602, 48, 569, 20, 107, "Text",ExpressionUUID->"e04d31bb-48ab-48e5-940c-18aefc39e42a"],
+Cell[2174, 70, 152, 3, 23, "Input",ExpressionUUID->"87a227c8-9720-4580-a1f1-e7b91625a1fa"],
+Cell[2329, 75, 233, 4, 23, "Input",ExpressionUUID->"d29ffdc7-d892-4485-813c-500a5beefba9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2599, 84, 363, 6, 57, "Section",ExpressionUUID->"67bc060f-3c3c-4e5a-bbe5-5d64b6d81c80"],
+Cell[CellGroupData[{
+Cell[2987, 94, 409, 6, 46, "Subsection",ExpressionUUID->"5d3a2144-67d6-42f1-994d-fe3eddcf9ed2"],
+Cell[CellGroupData[{
+Cell[3421, 104, 851, 21, 67, "Input",ExpressionUUID->"9febb533-a2c6-4984-b241-6f8100055520"],
+Cell[CellGroupData[{
+Cell[4297, 129, 216, 4, 20, "Print",ExpressionUUID->"604cdb60-c2bc-4523-91f2-b6f3619468b8"],
+Cell[4516, 135, 219, 4, 20, "Print",ExpressionUUID->"83cb3201-35f9-4ab4-ac23-2c9a5ba5c2d1"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4796, 146, 479, 7, 33, "Subsection",ExpressionUUID->"2b1d16d5-118a-4bc4-a23b-485696423513"],
+Cell[CellGroupData[{
+Cell[5300, 157, 1048, 26, 67, "Input",ExpressionUUID->"a892be96-7263-41cb-8eba-56613a3532a1"],
+Cell[CellGroupData[{
+Cell[6373, 187, 235, 4, 20, "Print",ExpressionUUID->"55328d56-24c2-4e0b-a63e-fd9e88664d89"],
+Cell[6611, 193, 241, 4, 20, "Print",ExpressionUUID->"4685615c-6e89-455c-a956-b595a5b9e578"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[6913, 204, 569, 8, 33, "Subsection",ExpressionUUID->"b682cfc0-383b-4d1b-aa46-d4316c29c67c"],
+Cell[CellGroupData[{
+Cell[7507, 216, 1649, 39, 83, "Input",ExpressionUUID->"2a7b1736-7aaa-40f4-b420-059610d8acad"],
+Cell[CellGroupData[{
+Cell[9181, 259, 376, 7, 20, "Print",ExpressionUUID->"d7964f74-3080-4d2a-a6e9-0b55f85de36c"],
+Cell[9560, 268, 373, 7, 20, "Print",ExpressionUUID->"6b3470d3-bd00-4e86-bd60-4409d54228d6"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[9994, 282, 645, 10, 46, "Subsection",ExpressionUUID->"844f0a76-d4ed-423f-b868-ffff18530525"],
+Cell[10642, 294, 355, 10, 24, "Input",ExpressionUUID->"4e45069d-5f1c-4541-9134-0de1bcdbe320"],
+Cell[CellGroupData[{
+Cell[11022, 308, 1620, 39, 67, "Input",ExpressionUUID->"a048d050-6883-4ada-80d9-be40367d3107"],
+Cell[CellGroupData[{
+Cell[12667, 351, 312, 5, 20, "Print",ExpressionUUID->"61df30a3-5a94-469b-873f-8c43a8e73e4f"],
+Cell[12982, 358, 311, 5, 20, "Print",ExpressionUUID->"970a7bfb-8641-45ba-b889-074762753df4"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[13354, 370, 667, 10, 46, "Subsection",ExpressionUUID->"d374f3c8-6548-46f1-9391-ff563615967c"],
+Cell[CellGroupData[{
+Cell[14046, 384, 1673, 42, 67, "Input",ExpressionUUID->"316b4753-5b07-4062-82a1-84822a33cab9"],
+Cell[CellGroupData[{
+Cell[15744, 430, 292, 5, 20, "Print",ExpressionUUID->"e4419c4a-dfe2-4290-8a40-22bd1e7b3528"],
+Cell[16039, 437, 289, 5, 20, "Print",ExpressionUUID->"add42cd4-cd0a-45ed-ae47-564b395bbde1"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[16389, 449, 720, 10, 33, "Subsection",ExpressionUUID->"3815a7bf-03f2-4c3c-8809-4430ca09b384"],
+Cell[CellGroupData[{
+Cell[17134, 463, 2141, 54, 67, "Input",ExpressionUUID->"b8c93483-2a8b-4eec-9831-96bcdd470a7f"],
+Cell[CellGroupData[{
+Cell[19300, 521, 314, 5, 20, "Print",ExpressionUUID->"d34ee8b3-0613-4df8-bfca-e342e1064b28"],
+Cell[19617, 528, 317, 5, 20, "Print",ExpressionUUID->"e90fee15-eaab-4f8b-90bc-0d71ad072dd4"]
+}, Closed]]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[20007, 541, 408, 6, 46, "Section",ExpressionUUID->"159e2899-0e45-4824-be13-471c7857548a"],
+Cell[CellGroupData[{
+Cell[20440, 551, 516, 8, 46, "Subsection",ExpressionUUID->"e3983b18-9aa2-47fe-8cb6-8411decc1787"],
+Cell[20959, 561, 355, 10, 24, "Input",ExpressionUUID->"9a2b2927-6973-4667-9775-aaf8676450c9"],
+Cell[CellGroupData[{
+Cell[21339, 575, 838, 21, 37, "Input",ExpressionUUID->"e0e52dd8-2ca0-4d95-9852-eb253b00c39a"],
+Cell[22180, 598, 328, 6, 20, "Print",ExpressionUUID->"57a6feec-8617-439f-8328-64c126c7e772"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[22557, 610, 563, 8, 46, "Subsection",ExpressionUUID->"f9b41b1d-5421-4c0d-878c-138f26b8996a"],
+Cell[23123, 620, 355, 10, 24, "Input",ExpressionUUID->"444f37dc-7acc-47e7-9e72-c05051df4033"],
+Cell[CellGroupData[{
+Cell[23503, 634, 885, 21, 37, "Input",ExpressionUUID->"991822a1-4ed6-4930-9689-04f5a9d4bc2e"],
+Cell[24391, 657, 352, 6, 20, "Print",ExpressionUUID->"272246d8-5da6-4b97-b477-8229d2523b01"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[24792, 669, 624, 9, 46, "Subsection",ExpressionUUID->"c8394821-c65f-4653-a4af-8c7ea2ccbdbe"],
+Cell[25419, 680, 355, 10, 24, "Input",ExpressionUUID->"d342eadb-2d58-4c6c-918b-62b3a2196ae8"],
+Cell[CellGroupData[{
+Cell[25799, 694, 924, 23, 37, "Input",ExpressionUUID->"fd5ca133-d34a-4e5a-bde3-bcd43e28d5e5"],
+Cell[26726, 719, 356, 6, 20, "Print",ExpressionUUID->"06e48e6c-77bd-4685-8173-44ff6d3d6b00"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[27131, 731, 625, 9, 46, "Subsection",ExpressionUUID->"06b734d0-ec58-4524-af3f-dccf48f3ad3e"],
+Cell[27759, 742, 355, 10, 24, "Input",ExpressionUUID->"fd7088e1-202b-4b95-82a3-ce9e6056dc79"],
+Cell[CellGroupData[{
+Cell[28139, 756, 983, 24, 67, "Input",ExpressionUUID->"4272834c-b51e-4e29-8253-e5920a590941"],
+Cell[29125, 782, 381, 7, 20, "Print",ExpressionUUID->"fb72d8e1-bb68-4ff0-bad0-1fa3798a4e75"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[29555, 795, 743, 11, 46, "Subsection",ExpressionUUID->"aae3df51-03e9-4c7f-91c4-58bf74f3484c"],
+Cell[30301, 808, 355, 10, 24, "Input",ExpressionUUID->"ceeffb98-4ed0-4213-8c09-7f5df5fc8a74"],
+Cell[CellGroupData[{
+Cell[30681, 822, 1381, 35, 67, "Input",ExpressionUUID->"49f052bc-172c-4a5b-bafc-6b31d92c138f"],
+Cell[32065, 859, 253, 5, 20, "Print",ExpressionUUID->"b1337d88-f454-4a41-9362-49a742e22189"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[32367, 870, 733, 11, 46, "Subsection",ExpressionUUID->"586128f9-20e1-4d13-a64a-627d4e65a00a"],
+Cell[33103, 883, 355, 10, 24, "Input",ExpressionUUID->"079829d5-0342-4107-abdb-f6c59699b075"],
+Cell[CellGroupData[{
+Cell[33483, 897, 1439, 37, 67, "Input",ExpressionUUID->"77c104a4-41d6-43b6-a0f5-f6e55033885d"],
+Cell[34925, 936, 308, 6, 20, "Print",ExpressionUUID->"2302e043-25e2-40f0-b6c0-a8c65eb6d922"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[35294, 949, 459, 7, 46, "Section",ExpressionUUID->"a2d3dc50-ff6e-4ef8-b597-6d7a69459a53"],
+Cell[CellGroupData[{
+Cell[35778, 960, 2017, 58, 196, "Input",ExpressionUUID->"ff1813f9-808a-4399-acf0-b37087b332ab"],
+Cell[37798, 1020, 283, 5, 18, "Print",ExpressionUUID->"1447aaeb-aa18-43a9-9a3d-5cf87dc8b13f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38118, 1030, 749, 19, 67, "Input",ExpressionUUID->"4e686f3a-5012-4c63-9e54-8e2ddcbadfd0"],
+Cell[38870, 1051, 264, 5, 18, "Print",ExpressionUUID->"a18fb238-eaa8-4f70-b984-a599a8d1f3ea"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39183, 1062, 510, 8, 57, "Section",ExpressionUUID->"4ed7dd24-da57-4e97-906a-d673e614af86"],
+Cell[CellGroupData[{
+Cell[39718, 1074, 1604, 39, 274, "Input",ExpressionUUID->"bbf1db99-8af9-4b04-b2af-ba1a4f3ea8d1"],
+Cell[41325, 1115, 798, 21, 81, "Output",ExpressionUUID->"93be1df3-133f-4aad-ad81-caaa8a2025f7"],
+Cell[42126, 1138, 924, 26, 18, "Print",ExpressionUUID->"b6fea84e-fe05-438d-b7dc-5dd3893e01d6"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
